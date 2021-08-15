@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  
+  restapi:
+    container_name: restapi
+    build:
+      context: ./room_reservation_api
+      dockerfile: Dockerfile
+    env_file: .env
+    ports:
+      - 8080:8080
+    restart: always
+    # command: guncorn room_reservation_api.wsgi
+    command: python room_reservation_api/manage.py runserver 0.0.0.0:8080

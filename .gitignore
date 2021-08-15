@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# project wide files
+room_reservation_api/room_reservation_api/staticfiles/
